@@ -26,7 +26,7 @@ seems to fix both issues (probably because the destination defaults to a supervi
 ### Opting out of `NSDraggingDestination`'s default implementation
 Opting out of `NSDraggingDestination`'s default implementation provided by `NSCollectionView` by simply overriding `draggingEntered(_:)` and not calling `super`'s implementation:
 
-```
+```swift
 class CustomCollectionView: NSCollectionView {
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
