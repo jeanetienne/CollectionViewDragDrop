@@ -15,12 +15,16 @@ The default implementation of `NSDraggingDestination` provided by `NSCollectionV
 ![NSCollectionView slow flock animation](nscollectionview-drag-animation.gif)
 
 ## Possible solutions
-**NOT** making the NSCollectionView a valid destination by **not** implementing: 
+
+### **NOT** making the NSCollectionView a Drop destination
+
+By **not** implementing: 
 - `collectionView(_:writeItemsAt:to:)` nor 
 - `collectionView(_:pasteboardWriterForItemAt:)` 
 seems to fix both issues (probably because the destination defaults to a superview, which relies on a `NSView`'s default implementation of `NSDraggingDestination`). But it introduces a new obvious issue: The CollectionView is not a drop destination anymore...
 
-Also, opting out of `NSDraggingDestination`'s default implementation provided by `NSCollectionView` by simply overriding `draggingEntered(_:)` and not calling `super`'s implementation:
+### Opting out of `NSDraggingDestination`'s default implementation
+Opting out of `NSDraggingDestination`'s default implementation provided by `NSCollectionView` by simply overriding `draggingEntered(_:)` and not calling `super`'s implementation:
 
 ```
 class CustomCollectionView: NSCollectionView {
