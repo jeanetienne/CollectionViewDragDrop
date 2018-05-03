@@ -40,5 +40,5 @@ seems to fix the `draggingFormation`'s issue, but again, a lot of work needs to 
 
 
 ## Help
-If you feel you can help, please open an issue, or a PR, or send me an email: <github@jeanetienne.net>
+If you feel you can help, please open an issue, or a PR, send me an email at <github@jeanetienne.net> or contribute to the [StackOverflow question](https://stackoverflow.com/questions/50145687/nscollectionviews-default-implementation-of-nsdraggingdestination-slow-flock-an)
 Thanks!
