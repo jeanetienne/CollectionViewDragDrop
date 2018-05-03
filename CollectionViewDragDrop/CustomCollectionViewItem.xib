@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CustomCollectionViewItem" customModule="CollectionViewDragDrop" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="FSe-ep-RM0" id="fCL-h0-ClX"/>
+                <outlet property="textField" destination="HhR-2S-1Qc" id="qmv-BS-MjW"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="311"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-ep-RM0">
+                    <rect key="frame" x="0.0" y="41" width="480" height="270"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FSe-ep-RM0" secondAttribute="height" multiplier="16:9" id="yqP-IG-Ans"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="3vS-2J-sw2"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HhR-2S-1Qc">
+                    <rect key="frame" x="214" y="10" width="52" height="21"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="kKj-Vf-rng">
+                        <font key="font" metaFont="systemSemibold" size="17"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="HhR-2S-1Qc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Arg-o2-6mg"/>
+                <constraint firstItem="FSe-ep-RM0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Cac-fe-lhi"/>
+                <constraint firstAttribute="trailing" secondItem="FSe-ep-RM0" secondAttribute="trailing" id="E7f-E0-rXP"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HhR-2S-1Qc" secondAttribute="bottom" constant="10" id="H4P-Fi-SRE"/>
+                <constraint firstItem="HhR-2S-1Qc" firstAttribute="top" secondItem="FSe-ep-RM0" secondAttribute="bottom" constant="10" id="eRF-wd-W2O"/>
+                <constraint firstItem="FSe-ep-RM0" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="sjp-Lb-bll"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="167"/>
+        </customView>
+        <collectionViewItem id="c2X-bD-ueb" customClass="CustomCollectionViewItem" customModule="CollectionViewDragDrop" customModuleProvider="target"/>
+    </objects>
+</document>
