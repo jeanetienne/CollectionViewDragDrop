@@ -37,3 +37,8 @@ class CustomCollectionView: NSCollectionView {
 
 ```
 seems to fix the `draggingFormation`'s issue, but again, a lot of work needs to be re-done to re-implement all of the "Drop destination" behaviour that come for free with `NSCollectionView`.
+
+
+## Help
+If you feel you can help, please open an issue, or a PR, or send me an email: <github@jeanetienne.net>
+Thanks!
