@@ -9,7 +9,7 @@ I want to recreate the Drag and Drop behaviour of the macOS Photos.app: when sel
 
 
 The default implementation of `NSDraggingDestination` provided by `NSCollectionView` seems to have a few issues: 
-- slow to animate the flock of images when dragging multiple items and moving the cursor (see gif below) 
+- slow to animate the flock of images when dragging multiple items and moving the cursor, and the red badge indicating the number of items is awkwardly close to the cursor (see gif below)
 - setting the `NSDraggingInfo`'s or `NSDraggingSession`'s `draggingFormation` property doesn't seem to have any effect, anywhere I set it
 
 ![NSCollectionView slow flock animation](nscollectionview-drag-animation.gif)
